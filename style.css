@@ -1,0 +1,127 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.osc-rot-jar {
+  display: inline-block;
+  animation: oscillate 3s infinite ease-in-out;
+}
+
+.osc-rot-jar img {
+  width: 150px;
+  height: 150px;
+  image-rendering: pixelated;
+}
+
+.counter {
+  font-size: 3em;
+  font-family: monospace;
+  transform: translateY(-300px);
+}
+
+.counter .Cvalue {
+  font-size: 3em;
+  font-family: monospace;
+  transform: translateY(-300px);
+}
+
+.text {
+  font-size: 4em;
+  transform: translateY(20px);
+  font-family: Arial, monospace;
+}
+
+.subtext {
+  font-size: 2.5;
+  transform: translateY(25px);
+  font-family: consolas;
+}
+
+.hyperclick {
+  font-size: 2;
+  font-family: monospace;
+  transform: translateY(-305px);
+}
+
+.hyperclick .Hvalue {
+  font-size: 2;
+  font-family: monospace;
+  transform: translateY(-305px);
+}
+
+.pop {
+  animation: bucketPop 0.1s ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+.like-pop {
+  position: absolute;
+  color: black;
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+  user-select: none;
+  animation: fadeMoveUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeMoveUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes oscillate {
+  0%, 100% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes bucketPop {
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(105%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
